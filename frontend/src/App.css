@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #A1CDF4 0%, #FFD3BA 100%);
+  font-family: 'Pixelify Sans', cursive;
+  color: #B6244F;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 40px;
+  gap: 20px;
+  text-align: center;
+  margin: 50px;
+}
+
+/* título */
+h1 {
+  font-size: 2.2rem;
+  text-shadow: 2px 2px #F49FBC;
+}
+
+/* área de input y botón */
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-task {
+  padding: 10px 15px;
+  border: 2px solid #B6244F;
+  border-radius: 8px;
+  background-color: #FFF5F7;
+  font-family: 'Pixelify Sans', cursive;
+  color: #B6244F;
+  outline: none;
+}
+
+.boton-pixel {
+  background-color: #F49FBC;
+  color: white;
+  border: 3px solid #B6244F;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #B6244F;
+  transition: all 0.15s ease;
+}
+
+.boton-pixel:hover {
+  background-color: #FFD3BA;
+  color: #B6244F;
+  box-shadow: 3px 3px 0px #F49FBC;
+  transform: translateY(-2px);
+}
+
+/* lista */
+.task-list {
+  list-style: none;
+  padding: 0;
+  width: 60%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.task-item {
+  background-color: #C3F3C0;
+  border: 2px solid #B6244F;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px #B6244F;
+}
+
+.boton-iloveu {
+
+  border: 5px solid #B6244F;
+  border-radius: 10px;
+  background-color: #f99db4;
+  box-shadow: 3px 3px 0px #B6244F;
+  color: white
+}
+
+h2{ 
+  font-size: 2.2 rem;
+  color:red;
+  text-shadow: 2px 2px #A1CDF4;
+  text-align: center;
+
+}

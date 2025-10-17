@@ -50,7 +50,7 @@ function App() {
       </ul>
 
       <div>
-        <h2 className="iloveu">💗❤️‍🔥 I love u 💗❤️‍🔥</h2>
+        <h2>💗❤️‍🔥 I love u 💗❤️‍🔥</h2>
         <button className="boton-iloveu"> ❤️‍🔥 I love u ❤️‍🔥 </button>
         </div>
       

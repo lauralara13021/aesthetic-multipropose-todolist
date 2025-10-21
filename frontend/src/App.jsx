@@ -52,7 +52,7 @@ function App() {
 
   <img class="sticker" src="images/star-sticker.png" alt="Sticker" />
   {/*<h1>🌼 Vale's To Do's 🌼</h1>*/}
-  <h1>🌼 ATARAXIA 🌼</h1>
+  <h1>🌼 VALE'S TO DO's 🌼</h1>
 </div>
 
 
@@ -121,7 +121,7 @@ function App() {
       <div className="phrase-image-container"> 
 
         <h2>🌼 Imagen del Día 🌼</h2>
-        <img className= "imageoftheday"src="images/paoyjuli.png" alt="Imagen del Día" />
+        <img className= "imageoftheday"src="images/pixel_background.png" alt="Imagen del Día" />
 
       </div>
 

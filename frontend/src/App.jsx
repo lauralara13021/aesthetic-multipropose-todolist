@@ -43,16 +43,33 @@ function App() {
     setCourseName("");
   };
 
+  const toggleTaskCompletion = async (id) => {
+  // 🔹 Crea una nueva lista de tareas actualizada
+  const updatedTasks = tasks.map((task) =>
+    task.id === id ? { ...task, completed: !task.completed } : task
+  );
+
+  // 🔹 Actualiza el estado con la nueva lista
+  setTasks(updatedTasks);
+
+  
+};
+
+
   return (
 
-<div className = "main-container">
+<div className = "main-container"> 
 
 
 <div class="contenedor">
 
   <img class="sticker" src="images/star-sticker.png" alt="Sticker" />
   {/*<h1>🌼 Vale's To Do's 🌼</h1>*/}
-  <h1>🌼 VALE'S TO DO's 🌼</h1>
+  <h1 className="text-4xl font-extrabold text-green-600 drop-shadow-lg text-center tracking-wide">
+  🌼 VALE'S TO DO's 🌼
+</h1>
+
+
 </div>
 
 
@@ -62,8 +79,9 @@ function App() {
 
 {/* container de proyecto*/}
     <div className="app-container">
-      <div><h2> 🌷 Proyectos 🌷</h2></div>     
-      <div className="input-area">        
+      <div><h2> 🌷 Proyectos 🌷</h2> 
+</div>     
+      <div className="input-area">       
         <input
           placeholder="Escribe tu tarea..."
           value={title}
@@ -73,11 +91,22 @@ function App() {
         <button onClick={newTask} className="boton-pixel">
           Add Task +
         </button>
+
       </div>
       <ul className="task-list">
+        
         {tasks.map((task) => (
           <li key={task.id} className="task-item">
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => toggleTaskCompletion(task.id)}
+              className="w-5 h-5 accent-pink-500 rounded cursor-pointer"
+            />
+
+            <span style = {{textDecoration: task.completed ? "line-through" : "none"}}>
             {task.id} - {task.title}
+            </span>
           </li>
         ))}
       </ul>

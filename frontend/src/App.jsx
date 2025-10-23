@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css"; 
+import "./index.css"
 function App() {
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
@@ -44,12 +45,9 @@ function App() {
   };
 
   const toggleTaskCompletion = async (id) => {
-  // 🔹 Crea una nueva lista de tareas actualizada
   const updatedTasks = tasks.map((task) =>
     task.id === id ? { ...task, completed: !task.completed } : task
   );
-
-  // 🔹 Actualiza el estado con la nueva lista
   setTasks(updatedTasks);
 
   
@@ -61,9 +59,9 @@ function App() {
 <div className = "main-container"> 
 
 
-<div class="contenedor">
+<div className="contenedor">
 
-  <img class="sticker" src="images/star-sticker.png" alt="Sticker" />
+  <img className="sticker" src="images/star-sticker.png" alt="Sticker" />
   {/*<h1>🌼 Vale's To Do's 🌼</h1>*/}
   <h1 className="text-4xl font-extrabold text-green-600 drop-shadow-lg text-center tracking-wide">
   🌼 VALE'S TO DO's 🌼
@@ -157,7 +155,7 @@ function App() {
        {/* frase del día*/}
        <div className="phrase-image-container">
         <h2>🌼 Frase del Día 🌼</h2>
-        <p1> "Pao! "</p1>
+        <p> "Pao! "</p>
        </div>
 
 

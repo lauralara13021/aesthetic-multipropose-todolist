@@ -1,0 +1,60 @@
+/* 🌸 Kawaii Buttons Library 🌸 */
+
+/* Base */
+.kawaii-btn {
+    @apply px-6 py-3 rounded-full font-semibold text-white text-lg
+         transition duration-300 cursor-pointer select-none
+         shadow-lg;
+}
+
+/* Glass Button */
+.kawaii-glass {
+  @apply bg-white/20 backdrop-blur-md border border-white/30;
+}
+.kawaii-glass:hover {
+  @apply bg-white/30 scale-105 shadow-xl;
+}
+
+/* Sparkles Button */
+.kawaii-sparkle {
+  @apply bg-pink-400 relative overflow-visible;
+}
+.kawaii-sparkle:hover {
+  @apply bg-pink-500 scale-110;
+}
+.kawaii-sparkle::after {
+  content: "✨";
+  @apply absolute -top-3 right-3 animate-pulse text-yellow-200;
+}
+
+/* Rainbow Pastel Button */
+.kawaii-rainbow {
+  background: linear-gradient(90deg,
+    #ffc1e3, #ffd3ba, #fff8b5, #c3fbd8, #c7d2fe, #f3b0ff
+  );
+  @apply text-pink-700;
+}
+.kawaii-rainbow:hover {
+  @apply scale-110 shadow-xl brightness-110;
+}
+
+/* 🎀 Rebound Animation */
+.kawaii-rebound:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+.btn-kawaii {
+  @apply px-4 py-2 rounded-xl text-white font-bold shadow-md transition-all;
+}
+
+.btn-pink {
+  @apply bg-pink-400 hover:bg-pink-500 active:scale-95;
+}
+
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+.animate-heartbeat { animation: heartbeat 1s infinite; }
+
+.hover-float { transition: transform 0.3s; }
+.hover-float:hover { transform: translateY(-6px) scale(1.05); }

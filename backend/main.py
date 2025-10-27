@@ -38,12 +38,30 @@ def create_tasks(task:Task):
     tasks.append(task.dict())
     return {"message": "Task created successfully", "task": task}
 
+@app.delete("/tasks/{task_id}")
+def delete_task(task_id: int, task: Task):
+    if task_id == task.id:
+        tasks.remove(task.dict())
+        return {"message": "Task deleted successfully"}
+    else:
+        return {"message": "Task not found"}
+
+#Courses
+
 @app.post("/courses")
 def create_courses(course: Course):
     courses.append(course.dict())
-    return{"message":"Course added succesfully", "course": course}
+    return {"message": "Course added successfully", "course": course}
 
 @app.get("/courses")
 def get_courses():
     print("Courses returned successfully")
     return courses
+
+@app.delete("/courses/{course_id}")
+def delete_course(course: Course, course_id: int):
+    if course_id == course.id:
+        courses.remove(course.dict())
+        return {"message":"Course deleted successfully"}
+    else:
+        return {"message": "Course not found"}
